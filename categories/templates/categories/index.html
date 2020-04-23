@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<p> Here are some Categories that have been defined</p>
+{% if show_categories %}
+    <ul>
+    {% for category in show_categories %}
+        <li>{{ category.category }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No categories avaialble</p>
+{% endif %}
+
+
+{% endblock %}
