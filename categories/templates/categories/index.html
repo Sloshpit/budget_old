@@ -3,17 +3,31 @@
 <div class="container">
       <div class="row justify-content-center">
         <div class="col-8">
-          <h1 class="mt-2">Categories</h1>
-<p> Here are some Categories that have been defined</p>
+          <h1 class="mt-2">Category List</h1>
+<p> Here are some categories that have been defined</p>
+
+
+
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th scope="col">Mster Category</th>
+<th scope="col">Category</th>
+</thead>
+<tbody>
 {% if show_categories %}
-    <ul>
     {% for category in show_categories %}
-        <li>{{ category.category }}</li>
+        <tr>
+        <td>{{ category.master_category }}</td>
+        <td>{{ category.category}}</td>
+     
     {% endfor %}
-    </ul>
 {% else %}
-    <p>No categories avaialble</p>
+    Nothing available
 {% endif %}
+</tbody>
+</table>
+
 </div>
 </div>
 </div>
