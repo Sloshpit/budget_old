@@ -6,3 +6,4 @@ class Account(models.Model):
     balance_date = models.DateField()
     def __str__(self):
          return '%s' % (self.account_name)
+    
