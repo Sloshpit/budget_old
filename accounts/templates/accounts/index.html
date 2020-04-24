@@ -12,6 +12,7 @@
 <thead>
 <tr>
 <th scope="col">Account Name</th>
+<th scope="col">Account Type</th>
 <th scope="col">Balance</th>
 <th scope="col">Balance Date</th>
 </thead>
@@ -20,6 +21,7 @@
     {% for account in show_accounts %}
         <tr>
         <td>{{ account.account_name }}</td>
+        <td>{{ account.account_type }}</td>
         <td>${{ account.balance | floatformat:2 }}</td>
         <td>{{ account.balance_date }}</td>
     {% endfor %}

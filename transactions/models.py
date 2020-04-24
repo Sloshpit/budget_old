@@ -9,5 +9,6 @@ class Transaction(models.Model):
    #add a category as a foreign key later that pulls this in as a dropdown
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     account_name = models.ForeignKey(Account, on_delete=models.CASCADE)
+    
     def __str__(self):
         return '%s  %s  %s %s %s %s' %(self.store, self.description, self.amount, self.trans_date, self.category, self.account_name)
