@@ -9,11 +9,10 @@
 <thead>
 <tr>
 <th scope="col">Store</th>
-<th scope="col">Description</th>
 <th scope="col">Amount</th>
+<th scope="col">Description</th>
 <th scope="col">Transaction Date</th>
 <th scope="col">Category</th>
-<th scope="col">Account</th>
 
 </thead>
 <tbody>
@@ -21,11 +20,10 @@
     {% for transaction in trans_for_account_id %}
         <tr>
         <td>{{ transaction.store }}</td>
-        <td>{{ transaction.description }}</td>
         <td>${{ transaction.amount | floatformat:2 }}</td>
+        <td>{{ transaction.description }}</td>
         <td>{{ transaction.trans_date }}</td>
         <td>{{ transaction.category }}</td>
-        <td>{{ transaction.account_name }}</td>
        </tr>
     {% endfor %}
 {% else %}
