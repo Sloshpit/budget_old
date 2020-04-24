@@ -22,10 +22,11 @@ def detail(request, account_id):
     selected_account = Account.objects.filter(id=account_id).values('account_name')
     acct_name = selected_account[0]['account_name']
     trans_for_account_id = Transaction.objects.filter(account_name=1)
-
+    transaction_total = Transaction.objects.filter(account_name=1).aggregate(sum=Sum('amount'))['sum'] or 0.00
     print (acct_name)
     context ={
         'acct_name': acct_name,
-        'trans_for_account_id': trans_for_account_id
+        'trans_for_account_id': trans_for_account_id,
+        'transaction_total': transaction_total
     }
     return HttpResponse((template.render(context,request)))
