@@ -12,20 +12,16 @@
 <thead>
 <tr>
 <th scope="col">Account Name</th>
-<th scope="col">Transaction</th>
-<th scope="col">Transaction Amount</th>
-<th scope="col">Transaction Date</th>
 <th scope="col">Balance</th>
+<th scope="col">Balance Date</th>
 </thead>
 <tbody>
 {% if show_accounts %}
     {% for account in show_accounts %}
         <tr>
         <td>{{ account.account_name }}</td>
-        <td>{{ account.transaction }}</td>
-        <td>${{ account.transaction_amount | floatformat:2 }}</td>
-        <td>{{ account.transaction_date }}</td>
         <td>${{ account.balance | floatformat:2 }}</td>
+        <td>{{ account.balance_date }}</td>
     {% endfor %}
 {% else %}
     Nothing available
