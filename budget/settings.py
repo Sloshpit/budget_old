@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'transactions.apps.TransactionsConfig',
     'categories.apps.CategoriesConfig',
     'accounts.apps.AccountsConfig',
+    'budgettracker.apps.BudgettrackerConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
